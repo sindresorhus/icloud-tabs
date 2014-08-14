@@ -1,6 +1,6 @@
 'use strict';
 var assert = require('assert');
-var icloudTabs = require('./index');
+var icloudTabs = require('./');
 
 it('should return iCloud tabs', function (cb) {
 	icloudTabs(function (err, devices) {

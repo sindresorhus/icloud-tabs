@@ -19,7 +19,7 @@ function parse(buf) {
 				return {
 					title: el.Title,
 					url: el.URL
-				}
+				};
 			})
 		};
 	});
@@ -52,5 +52,5 @@ module.exports.sync = function () {
 		}
 
 		throw err;
-	};
-}
+	}
+};
