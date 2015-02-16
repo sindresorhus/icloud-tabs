@@ -32,7 +32,7 @@
   ],
   "dependencies": {
     "bplist-parser": "0.0.6",
-    "untildify": "^1.0.0"
+    "untildify": "^2.0.0"
   },
   "devDependencies": {
     "mocha": "*"
