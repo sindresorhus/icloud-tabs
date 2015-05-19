@@ -1,6 +1,6 @@
 {
   "name": "icloud-tabs",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Get the iCloud tabs for all synced devices (OS X)",
   "license": "MIT",
   "repository": "sindresorhus/icloud-tabs",
