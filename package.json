@@ -7,7 +7,7 @@
   "author": {
     "name": "Sindre Sorhus",
     "email": "sindresorhus@gmail.com",
-    "url": "http://sindresorhus.com"
+    "url": "sindresorhus.com"
   },
   "engines": {
     "node": ">=0.10.0"
@@ -23,7 +23,6 @@
   ],
   "keywords": [
     "osx",
-    "mac",
     "plist",
     "icloud",
     "tabs",
@@ -31,7 +30,7 @@
     "sync"
   ],
   "dependencies": {
-    "bplist-parser": "0.0.6",
+    "bplist-parser": "^0.1.0",
     "untildify": "^2.0.0"
   },
   "devDependencies": {
