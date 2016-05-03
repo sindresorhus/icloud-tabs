@@ -10,13 +10,13 @@
     "url": "sindresorhus.com"
   },
   "engines": {
-    "node": ">=0.10.0"
+    "node": ">=4"
   },
   "os": [
     "darwin"
   ],
   "scripts": {
-    "test": "mocha"
+    "test": "xo && ava"
   },
   "files": [
     "index.js"
@@ -31,9 +31,14 @@
   ],
   "dependencies": {
     "bplist-parser": "^0.1.0",
-    "untildify": "^2.0.0"
+    "pify": "^2.3.0",
+    "untildify": "^3.0.1"
   },
   "devDependencies": {
-    "mocha": "*"
+    "ava": "*",
+    "xo": "*"
+  },
+  "xo": {
+    "esnext": true
   }
 }

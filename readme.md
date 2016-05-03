@@ -5,7 +5,7 @@
 
 ## Install
 
-```sh
+```
 $ npm install --save icloud-tabs
 ```
 
@@ -13,7 +13,7 @@ $ npm install --save icloud-tabs
 ## Usage
 
 ```js
-var icloudTabs = require('icloud-tabs');
+const icloudTabs = require('icloud-tabs');
 
 console.log(icloudTabs.sync());
 /*
@@ -42,17 +42,15 @@ console.log(icloudTabs.sync());
 
 Tabs are fetched from `~/Library/SyncedPreferences/com.apple.Safari.plist`, so it works fine offline.
 
-### icloudTabs(callback)
+### icloudTabs()
 
-#### callback(err, devices)
-
-`devices` is an array of device objects as shown in the usage example.
+Returns a Promise of `devices`.
 
 ### icloudTabs.sync()
 
-Synchronous version. Returns `devices`.
+Returns an array of `devices`.
 
 
 ## License
 
-MIT © [Sindre Sorhus](http://sindresorhus.com)
+MIT © [Sindre Sorhus](https://sindresorhus.com)
