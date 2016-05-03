@@ -1,49 +1,43 @@
 'use strict';
-var fs = require('fs');
-var bplistParser = require('bplist-parser');
-var untildify = require('untildify');
+const fs = require('fs');
+const bplistParser = require('bplist-parser');
+const untildify = require('untildify');
+const pify = require('pify');
 
-var file = untildify('~/Library/SyncedPreferences/com.apple.Safari.plist');
+const fsP = pify(fs);
+const file = untildify('~/Library/SyncedPreferences/com.apple.Safari.plist');
 
-function parse(buf) {
-	var items = bplistParser.parseBuffer(buf)[0].values;
+const parse = buf => {
+	const items = bplistParser.parseBuffer(buf)[0].values;
 
-	return Object.keys(items).map(function (key) {
-		var val = items[key].value;
+	return Object.keys(items).map(key => {
+		const val = items[key].value;
 
 		return {
 			deviceId: key,
 			deviceName: val.DeviceName,
 			modified: new Date(val.LastModified),
-			tabs: (val.Tabs || []).map(function (el) {
+			tabs: (val.Tabs || []).map(x => {
 				return {
-					title: el.Title,
-					url: el.URL
+					title: x.Title,
+					url: x.URL
 				};
 			})
 		};
 	});
-}
-
-module.exports = function (cb) {
-	fs.readFile(file, function (err, buf) {
-		if (err && err.code === 'ENOENT') {
-			return cb(null, []);
-		}
-
-		if (err) {
-			return cb(err);
-		}
-
-		try {
-			cb(null, parse(buf));
-		} catch (err) {
-			cb(err);
-		}
-	});
 };
 
-module.exports.sync = function () {
+module.exports = () => fsP.readFile(file)
+	.then(parse)
+	.catch(err => {
+		if (err.code === 'ENOENT') {
+			return [];
+		}
+
+		throw err;
+	});
+
+module.exports.sync = () => {
 	try {
 		return parse(fs.readFileSync(file));
 	} catch (err) {
