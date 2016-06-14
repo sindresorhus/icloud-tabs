@@ -1,6 +1,6 @@
 # icloud-tabs [![Build Status](https://travis-ci.org/sindresorhus/icloud-tabs.svg?branch=master)](https://travis-ci.org/sindresorhus/icloud-tabs)
 
-> Get the [iCloud tabs](https://www.google.com/search?q=icloud+tabs) for all synced devices *(OS X)*
+> Get the [iCloud tabs](https://www.google.com/search?q=icloud+tabs) for all synced devices *(macOS)*
 
 
 ## Install

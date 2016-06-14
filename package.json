@@ -1,7 +1,7 @@
 {
   "name": "icloud-tabs",
   "version": "2.0.0",
-  "description": "Get the iCloud tabs for all synced devices (OS X)",
+  "description": "Get the iCloud tabs for all synced devices (macOS)",
   "license": "MIT",
   "repository": "sindresorhus/icloud-tabs",
   "author": {
@@ -22,6 +22,7 @@
     "index.js"
   ],
   "keywords": [
+    "macos",
     "osx",
     "plist",
     "icloud",
