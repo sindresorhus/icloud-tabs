@@ -1,14 +1,12 @@
-# icloud-tabs [![Build Status](https://travis-ci.org/sindresorhus/icloud-tabs.svg?branch=master)](https://travis-ci.org/sindresorhus/icloud-tabs)
+# icloud-tabs [![Build Status](https://travis-ci.com/sindresorhus/icloud-tabs.svg?branch=master)](https://travis-ci.com/sindresorhus/icloud-tabs)
 
 > Get the [iCloud tabs](https://www.google.com/search?q=icloud+tabs) for all synced devices *(macOS)*
-
 
 ## Install
 
 ```
-$ npm install --save icloud-tabs
+$ npm install icloud-tabs
 ```
-
 
 ## Usage
 
@@ -25,18 +23,17 @@ console.log(icloudTabs.sync());
 		tabs: [
 			{
 				title: 'TodoMVC',
-				url: 'http://todomvc.com'
+				url: 'https://todomvc.com'
 			},
 			{
 				title: 'Sindre Sorhus',
-				url: 'http://sindresorhus.com'
+				url: 'https://sindresorhus.com'
 			}
 		]
 	}
 ]
 */
 ```
-
 
 ## API
 
@@ -49,8 +46,3 @@ Returns a promise for an array of `devices`.
 ### icloudTabs.sync()
 
 Returns an array of `devices`.
-
-
-## License
-
-MIT © [Sindre Sorhus](https://sindresorhus.com)
