@@ -1,3 +1,7 @@
+This package is deprecated as it's no longer possible to access the tabs.
+
+---
+
 # icloud-tabs
 
 > Get the [iCloud tabs](https://www.google.com/search?q=icloud+tabs) for all synced devices *(macOS)*
